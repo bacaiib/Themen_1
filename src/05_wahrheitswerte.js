@@ -3,7 +3,7 @@
 // Deklaration
 let ageJohn, ageMark;
 const birthYearJohn = 2000;
-const birthYearMark = 1990;
+const birthYearMark = 2006;
 
 // Berechnung Alter
 let date = new Date(); // Systemfunktion Datum
@@ -15,4 +15,11 @@ ageMark = 2024 - birthYearMark;
 console.log("ageJohn: " + ageJohn);
 console.log("ageMark: " + ageMark);
 
-console.log("Datum: " + date);
+// console.log("Datum: " + date);
+
+// Deklaration 
+let isJohnOlder // Is John older? --> y/n --> treu / false
+isJohnOlder = (ageJohn > ageMark); // Test 
+isJonEgual = (ageJohn == ageMark);
+console.log("isJohnOlder: " + isJohnOlder);
+console.log("isJohnEquel: " + isJonEgual);
