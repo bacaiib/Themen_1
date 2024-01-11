@@ -23,17 +23,39 @@ const age =  parseInt(prompt("Bitte Alter eingeben:")); // "2" --> 2
 
 // console.log(age);
 
-// //}
+// switch (true) {
+//     case (age >= 0) && (age <= 5) :
+//         console.log(firstName + " trinkt Milch.");
+//         break;
+//     case (age >= 6) && (age <= 12):
+//         console.log(firstName + " trinkt Saft.");
+//         break;
+//     case (age >= 13) && (age <= 17):
+//         console.log(firstName + " trinkt Cola.");
+//         break;
+//     case (age >= 18) && (age <= 130):
+//         console.log(firstName + " trinkt Wein.");
+//         break;   
+//     default:
+//         console.log("Bitte Tee trinken!");   
+//         break;
+// }
 
+// if (age >= 0 && age <= 5){
+//     console.log(firstName + " trinkt Milch.");
+// } else if (age >= 6 && age <= 12){
+//     console.log(firstName + " trinkt Saft.");
+// } else if (age >= 13 && age <= 17){
+//     console.log(firstName + " trinkt Cola.");
+// } else if (age >= 18 && age <= 130){
+//     console.log(firstName + " trinkt Wein.");
+// } else {
+//     console.log("bitter Tee trinken.");
+// }
 
-if (age >= 0 && age <= 5){
-    console.log(firstName + " trinkt Milch.");
-} else if (age >= 6 && age <= 12){
-    console.log(firstName + " trinkt Saft.");
-} else if (age >= 13 && age <= 17){
-    console.log(firstName + " trinkt Cola.");
-} else if (age >= 18 && age <= 130){
-    console.log(firstName + " trinkt Wein.");
-} else {
-    console.log("bitter Tee trinken.");
-}
+const drink = age <= 5 ? "Milch" :
+              age <= 12 ? "Saft" :
+              age <= 17 ? "Cola" :
+              age <= 130 ? "Wein" : "Tee";
+
+console.log(firstName + " trinkt " + drink + ".");
