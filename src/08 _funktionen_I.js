@@ -25,3 +25,16 @@ function ausgabeNamen() {
 }
 
 // console.log(firstName); // Fehler : scope!
+
+/***** Funktionen 02b *****/
+// 2b. Parametrisierung + Datenübergabe von AUSSEN
+
+ausgabeNamen2("Maria"); // Argument --> Daten 
+ausgabeNamen2("Nadim");
+ausgabeNamen2("Melanie");
+
+function ausgabeNamen2(firstName) { // Parameter für Parameter
+    console.log("Hallo, " + firstName  +"!");
+}
+
+
