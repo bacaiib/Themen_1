@@ -20,7 +20,7 @@ function add(a,b) {
 	return a + b;
 }
 
-// module: substraction a - b | test
+// module: subtraction a - b | test
 
 // output(subtract(2,2));
 
