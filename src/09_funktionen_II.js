@@ -28,6 +28,14 @@ function subtract(a,b) {
 	return a - b;
 }
 
+// module: multiplikation a * b | Test
+
+// output(mul(2,6));
+
+function mul(a,b) {
+	return a * b;
+}
+
 
 // module: output | test:
 // output("hello");
