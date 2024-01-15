@@ -13,23 +13,34 @@
 const prompt = require('prompt-sync')({sigint: true});
 const ERROR_STR_DIV = "Division durch nUll geht nicht yaaa"
 const ERROR_STR_GEN = "iwas ist schief gelaufen"
+const ERROR_STR_INVALID_NUMBER = "Ungültige Zahl eingeben";
 
 startApp();
 function startApp() {
-	output(calculator(getNum1(),getNum2(),getOp()));
-}
+	let num1 = getNum("Num1?: ");
+	let num2 = getNum("Num2?: ");
+	if (num1 === null || num2 === null){
+		console.log(ERROR_STR_INVALID_NUMBER);
+	} else {
+			output(calculator(num1,num2,getOp()));
+		}
+	}
 
-function getNum1() {
-	return parseInt(prompt("Num1?: "));
+function getNum() {
+	let num = parseInt(prompt("Geben Sie eine Zahl ein: "));
+	if(isNaN(num)) {
+		return null;
+	}
+	return num;
 }
+	
 
-function getNum2() {
-	return parseInt(prompt("Num2?: "));
-}
 
 function getOp() {
 	return prompt("OP?: ");
 }
+
+
 // module: calculator | tests:
 // agreement : "+","-","*",":","/"
 // output(calculator(3,2,"+"));
