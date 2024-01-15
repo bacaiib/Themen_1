@@ -82,7 +82,7 @@ function ausgabeNamenSRP(firstName, familyName) { // Parameter für Parameter
   }
 
 
- // 2. Funktionalität: string output
+//  2. Funktionalität: string output
 // output("hi");
 // output(2);
 // output(true);
