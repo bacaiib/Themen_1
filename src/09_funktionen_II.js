@@ -5,10 +5,40 @@
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
 1. Dateneingabe + -überprüfung :  
-2. Auswahl Rechenart : 
-3. Fkt. Grundrechenarten : 
-4. Ausgabe in Konsole : 
+2. Auswahl Rechenart : check!
+3. Fkt. Grundrechenarten : check!
+4. Ausgabe in Konsole : check!
 */
+
+const ERROR_STR_DIV = "Division durch nUll geht nicht yaaa"
+const ERROR_STR_GEN = "iwas ist schief gelaufen"
+
+// module: calculator | tests:
+// agreement : "+","-","*",":","/"
+output(calculator(3,2,"+"));
+output(calculator(3,2,"-"));
+output(calculator(3,2,"*"));
+output(calculator(3,2,":"));
+output(calculator(3,2,"/"));
+output(calculator(3,0,"/"));
+output(calculator(3,2,"#?!"));
+
+function calculator(a,b,op) {
+
+	switch (op) {
+		case  "+":  // add()
+			return add(a,b);
+		case "-":   // sub()
+			return sub(a,b);
+		case "*":   // mul()
+			return mul(a,b);
+		case "/":   // div()
+		case ":":   // div()
+			return div(a,b);
+		default:    // Error
+			return ERROR_STR_GEN;
+	}
+}
 
 
 // module addition a + b | test
@@ -22,9 +52,9 @@ function add(a,b) {
 
 // module: subtraction a - b | test
 
-// output(subtract(2,2));
+// output(sub(2,2));
 
-function subtract(a,b) {
+function sub(a,b) {
 	return a - b;
 }
 
@@ -38,10 +68,10 @@ function mul(a,b) {
 
 // module: divide a / b | Test
 
-const ERROR_STR_DIV = "Division durch nUll geht nicht yaaa"
-output(div(2,2));
-output(div(2,2));
-output(div(2,0));
+
+// output(div(2,2));
+// output(div(2,2));
+// output(div(2,0));
 
 function div(a,b) {
 
