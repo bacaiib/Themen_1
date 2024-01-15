@@ -38,18 +38,19 @@ function mul(a,b) {
 
 // module: divide a / b | Test
 
+const ERROR_STR_DIV = "Division durch nUll geht nicht yaaa"
 output(div(2,2));
 output(div(2,2));
 output(div(2,0));
 
 function div(a,b) {
 
-	if (b !== 0) {  // b ungleich 0
-		return a / b;
-	} else {
-		return "Division durch nUll geht nicht yaaa"
+	if (b == 0) {
+		return ERROR_STR_DIV; // Ausnahme
 	}
-}
+		return a / b; // Reguläres Verhalten
+	} 
+
 
 // module: output | test:
 // output("hello");
