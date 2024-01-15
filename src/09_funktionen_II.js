@@ -4,24 +4,41 @@
 /*
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
-1. Dateneingabe + -überprüfung :  
+1. Dateneingabe + -überprüfung :  check! / todo!
 2. Auswahl Rechenart : check!
 3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
 
+const prompt = require('prompt-sync')({sigint: true});
 const ERROR_STR_DIV = "Division durch nUll geht nicht yaaa"
 const ERROR_STR_GEN = "iwas ist schief gelaufen"
 
+startApp();
+function startApp() {
+	output(calculator(getNum1(),getNum2(),getOp()));
+}
+
+function getNum1() {
+	return parseInt(prompt("Num1?: "));
+}
+
+function getNum2() {
+	return parseInt(prompt("Num2?: "));
+}
+
+function getOp() {
+	return prompt("OP?: ");
+}
 // module: calculator | tests:
 // agreement : "+","-","*",":","/"
-output(calculator(3,2,"+"));
-output(calculator(3,2,"-"));
-output(calculator(3,2,"*"));
-output(calculator(3,2,":"));
-output(calculator(3,2,"/"));
-output(calculator(3,0,"/"));
-output(calculator(3,2,"#?!"));
+// output(calculator(3,2,"+"));
+// output(calculator(3,2,"-"));
+// output(calculator(3,2,"*"));
+// output(calculator(3,2,":"));
+// output(calculator(3,2,"/"));
+// output(calculator(3,0,"/"));
+// output(calculator(3,2,"#?!"));
 
 function calculator(a,b,op) {
 
@@ -39,7 +56,6 @@ function calculator(a,b,op) {
 			return ERROR_STR_GEN;
 	}
 }
-
 
 // module addition a + b | test
 // output(add(2,2));
@@ -81,8 +97,8 @@ function div(a,b) {
 		return a / b; // Reguläres Verhalten
 	} 
 
-
 // module: output | test:
+
 // output("hello");
 // output(2);
 function output(outputData) {
