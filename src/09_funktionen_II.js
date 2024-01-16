@@ -12,8 +12,8 @@
 
 const prompt = require('prompt-sync')({sigint: true});
 const ERROR_STR_DIV = "Division durch nUll geht nicht yaaa"
-const ERROR_STR_GEN = "iwas ist schief gelaufen"
-const ERROR_STR_INVALID_NUMBER = "Ungültige Zahl eingeben";
+const ERROR_STR_GEN = "Bitte einen Operator eingeben"
+const ERROR_STR_INVALID_NUMBER = "Ungültige Einage! Bitte Zahl eingeben!";
 
 startApp();
 function startApp() {
