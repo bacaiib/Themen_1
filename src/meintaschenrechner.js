@@ -1,52 +1,52 @@
 
-
 const prompt = require('prompt-sync')({sigint: true});
-const ERROR_STR_DIV = "teilen durch null fucking nicht möglich";
-const ERROR_STR_GEN = "mit dem kack kan man nichst anfangen";
-const ERROR_STR_INVALID_NUMBER = "nicht gültig dein eingabe yaaa";
+const ERROR_STR_DIV = "Durch null kann man nicht teilen"
+const ERROR_STR_GEN = "Bitte einen Operator eingeben"
+const ERROR_STR_INVALID_NUMBER = "Bitte gültige Zahl eingeben"
 
 startApp();
 
 function startApp() {
     let num1 = getNum("Num1?: ");
     let num2 = getNum("Num2?: ");
-    if (num1 === null || num2 === null) {
+    if (num1 === null || num2 === null){
         return ERROR_STR_INVALID_NUMBER;
-    } else {
-        output(calculator(num1,num2,getOp()))
     }
+        output(calculator(num1,num2,getOp()));
+    
 }
 
 function getNum() {
-    let num = parseInt(prompt("Gib nummer ein junge! "));
-    if(isNaN(num)){
-        return null;
+    let num = parseInt(prompt("Gebe eine Zahl ein: "))
+    if (isNaN(num)) {
+    return null;
     }
-    return num;
+    return num; 
 }
 
 function getOp() {
-    return prompt("gib op ein junge")
+    return prompt("OP: ")
+    
 }
 
+// output(calculator(23,12,"+"));
 function calculator(a,b,op) {
-
     switch (op) {
         case "+":
-           return add(a,b);
+            return add(a,b);
         case "-":
-            return sub(a.b);
-        case "*":  
-            return mul(a,b);
-        case "/":
+            return sub(a,b);
         case ":":
+        case "/":
             return div(a,b);
-        default:   
+        case "*":
+            return mul(a,b);
+        default:
             return ERROR_STR_GEN;
     }
     
 }
-
+// output (div(3,6));
 function add(a,b) {
     return a + b;
 }
@@ -60,13 +60,12 @@ function mul(a,b) {
 }
 
 function div(a,b) {
-
     if (b == 0) {
-        return ERROR_STR_DIV;
+        return ERROR_STR_DIV
     }
-    return a / b;    
+    return a / b;
 }
 
 function output(outputData) {
-    console.log(outputData)
+    console.log(outputData) 
 }
